@@ -15,6 +15,7 @@
 # Approach: 
 - Here, we utilized the Microsoft Phi-2 model as the backbone for Multi Modal LLM. To optimize the Microsoft Phi-2 model for multi-modal tasks, we adopted the Qlora fine-tuning strategy. Know more about qlora refer here [qlora](https://arxiv.org/abs/2305.14314).
 
+
 # Stage 1: Pre-training: 
 ### Training the projection model
 Our objective in Stage 1 is to build a Multi-Modal LLM that processes text, image as inputs producing text-based outputs. 
@@ -78,6 +79,7 @@ Step 12000/20000: Avg Running Loss = 4.518374887943268
 
 <img width="418" alt="image" src="https://github.com/sunandhini96/TSAI_ERAV1/assets/63030539/cfea8623-14d7-4fba-af53-189b4bcd6bda">
 
+
 # Stage 2: Fine-tuning
 
 ### Fine tuning projection and phi 2 model
@@ -125,6 +127,8 @@ Training finished.
 
 
 We convert audio to text embeddings using the Whisper model, then concatenate these embeddings with image or text embeddings based on the inputs passed to the model to obtain the text output
+
+# Stage 3:
 
 # Creating hugging face space: 
 [App link](https://huggingface.co/spaces/Gosula/MultimodalLLM)
